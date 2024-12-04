@@ -10,7 +10,7 @@ const Home = () => {
   }, [state.favoritos]);
 
   return (
-    <main>
+    <main className={state.theme}>
       <h1>Home</h1>
       <div className="card-grid">
         {state.dentistas.map((dentista) => (

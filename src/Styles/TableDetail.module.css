@@ -9,6 +9,8 @@ table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
+  background-color: var(--bg-color-sec);
+  border: 1px solid var(--border-co);
 }
 
 tbody tr {
@@ -34,9 +36,5 @@ td {
   text-align: left;
   font-weight: 500;
   padding: 10px;
-  color: #626161;
-}
-
-tbody tr:hover td {
-  background-color: #e6f7ff;
+  color: var(--text-color);
 }

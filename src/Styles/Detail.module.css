@@ -7,13 +7,13 @@
   justify-content: center;
 }
 .detail h1 {
-  color: #4d4c4ce0;
+  color: var(--text-color);
 }
 /*contenedor de tabla */
 .tableContainer {
   width: 90%;
   max-width: 500px;
-  background-color: #fff;
+  background-color: var(--bg-color-sec);
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -33,4 +33,6 @@ a:hover {
   text-align: center;
   font-size: 1.5em;
   font-weight: 900;
+  color: var(--text-color);
+  padding-bottom: 0.5em;
 }

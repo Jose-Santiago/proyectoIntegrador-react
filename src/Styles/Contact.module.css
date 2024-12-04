@@ -6,4 +6,6 @@
   margin-top: 80px;
   padding-top: 20px;
   margin-bottom: 2em;
+  background-color: var(--bg-color-sec);
+  color: var(--text-color);
 }

@@ -16,10 +16,30 @@ input {
   height: 30px;
   border-radius: 10px;
   font-size: 0.8em;
-  background-color: rgba(22, 97, 209, 0.103);
+  background-color: rgba(22, 97, 209, 0.129);
   border: 1px solid rgb(0, 57, 244);
+  color: var(--text-color);
 }
+/*
+input.dark {
+  width: 400px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 0.8em;
+  background-color: rgba(36, 74, 130, 0.129);
+  border: 1px solid rgb(244, 0, 81);
+  color: var(--text-color);
+}*/
 
+.input .dark {
+  width: 400px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 0.8em;
+  background-color: rgba(255, 255, 255, 0.129);
+  border: 1px solid rgb(244, 0, 81);
+  color: var(--text-color);
+}
 .buttonForm {
   width: 200px;
   height: 40px;

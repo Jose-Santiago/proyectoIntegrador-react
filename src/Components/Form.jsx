@@ -1,7 +1,9 @@
 import styles from "@/Styles/Form.module.css";
 import { useState } from "react";
 import MsgError from "./MsgError";
+import { useGlobalState } from "@/Context/Context";
 const Form = () => {
+  const { state } = useGlobalState();
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -35,6 +37,7 @@ const Form = () => {
     <form className={styles.form} onSubmit={handleSubmit}>
       <label htmlFor="name">Nombre:</label>
       <input
+        className={state.theme}
         type="text"
         id="name"
         name="name"
@@ -43,6 +46,7 @@ const Form = () => {
       />
       <label htmlFor="email">Email:</label>
       <input
+        className={state.theme}
         type="text"
         id="email"
         name="email"

@@ -5,10 +5,12 @@ import Home from "@/Routes/Home";
 import Contact from "@/Routes/Contact";
 import Detail from "@/Routes/Detail";
 import Favs from "@/Routes/Favs";
+import { useGlobalState } from "@/Context/Context";
 
 function App() {
+  const { state } = useGlobalState();
   return (
-    <div className="App">
+    <div className={`App ${state.theme}`}>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
