@@ -6,17 +6,20 @@ const GlobalState = createContext();
 const initialState = {
   theme: "light",
   dentistas: [],
-  favoritos: [],
+  favoritos: JSON.parse(localStorage.getItem("favs")) || [],
 };
 
 const Context = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  console.log(state);
   const URL = "https://jsonplaceholder.typicode.com/users";
   useEffect(() => {
-    axios(URL).then((res) => {
-      console.log(res.data);
-    });
+    axios(URL)
+      .then((res) => {
+        dispatch({ type: "GET_DENTIST", payload: res.data });
+      })
+      .catch((err) => {
+        console.log("error al consultar a la API: ", err);
+      });
   }, []);
 
   return (

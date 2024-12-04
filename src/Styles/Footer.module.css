@@ -1,0 +1,49 @@
+/* footer */
+footer {
+  background-color: rgb(255, 0, 0);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+.containerFooter {
+  color: white;
+  font-weight: 900;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  bottom: 0;
+  background-color: rgb(255, 0, 0);
+  width: 80%;
+}
+img {
+  width: 30px;
+  margin: 0;
+}
+p {
+  margin: 0;
+  padding: 0.5rem;
+}
+.containerDH {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.containerDH img {
+  width: 180px;
+}
+.student {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.containerRedes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+/* fin footer */

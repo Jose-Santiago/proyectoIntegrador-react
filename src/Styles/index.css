@@ -1,90 +1,187 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --primary-color: #065bb6;
+}
+
+.dark-theme {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --primary-color: #1f78c1;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.App {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.favButton{
+main {
+  flex: 1;
+  padding: 2rem;
+  margin-top: 40px;
+}
+main.dark {
+  background-color: #12121296;
+  color: white;
+}
+main.dark > a {
+  color: white;
+}
+.favButton {
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
   border: none;
   width: 100%;
   cursor: pointer;
+  border-radius: 10px;
 }
 
-h1{
+h1 {
+  text-align: center;
+}
+h2 {
+  font-size: 1.3em;
+  color: rgb(4, 2, 154);
   text-align: center;
 }
 
-nav{
+h2.dark {
+  font-size: 1.3em;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+/*navegacion*/
+nav {
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
-  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  background-color: #065bb6;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
 }
 
-a{
+nav.dark {
+  background-color: #000000;
+}
+.navContainer {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+.navLogo {
+  width: 35px;
+  height: 35px;
+}
+.bxs-moon {
+  font-size: 35px;
+}
+.bxs-sun {
+  font-size: 35px;
+  color: rgb(255, 149, 0);
+}
+.btnTheme {
+  border-radius: 15px;
+  border: 3px solid #2978cc;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transición suave para efectos */
+}
+.btnThemeSun {
+  border-radius: 15px;
+  border: 3px solid #2978cc;
+  background-color: #ffffff;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transición suave para efectos */
+}
+.btnThemeSun:active {
+  transform: scale(0.95); /* Reduce el tamaño del botón */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #000000; /* Cambia el color al presionar */
+  border-color: #ffffff; /* Cambia el color del borde al presionar */
+}
+.btnTheme:active {
+  transform: scale(0.95); /* Reduce el tamaño del botón */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #0056b3; /* Cambia el color al presionar */
+  border-color: #79a6d5; /* Cambia el color del borde al presionar */
+}
+/*Fin Navegacion*/
+
+a {
   color: #000;
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
 }
-a:hover{
+a:hover {
   color: rgb(136, 136, 136);
-} 
+}
 
-footer {
+/*Estilos de card*/
+.card {
   display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  position: relative;
-  bottom: 0;
-  width: 90%;
-  height: 40px;
-  margin-top: 2rem;
-}
-
-footer > img{
-  width: 200px;
-  margin: 0;
-}
-footer > p{
-  margin: 0;
-  padding-top: 0.7rem;
-}
-
-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 300px;
-  height: 100px;
-  margin: 0 auto;
-}
-
-.card{
-  display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
+  border-radius: 25px;
+  overflow: hidden;
+}
+.cardImg {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+}
+h3 {
+  margin: 10px;
+  padding: 0;
+  font-size: 1.1em;
+  text-align: center;
+}
+h4 {
+  text-align: center;
+  margin: 10px;
+  padding: 0;
+  font-size: 0.8em;
 }
 
-.card:hover{
+.card:hover {
   border: 0.5px solid rgb(206, 217, 142);
 }
 
-.card-grid{
+.card-grid {
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
@@ -94,26 +191,18 @@ form{
   margin: 0 auto;
 }
 
-table {
- border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    display: table;
-    border: 1px solid #ccc;
-
+.bx-bookmark-heart {
+  font-size: 40px;
+  color: rgb(92, 92, 92);
 }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+.like {
+  color: red;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
+/*fin Estilos de card*/
 
-.dark{
+.dark {
   background-color: #12121296;
   color: white;
 }
