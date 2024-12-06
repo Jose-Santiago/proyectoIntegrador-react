@@ -1,27 +1,22 @@
-.table-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
-
 /* estilos para la tabla*/
-table {
+.table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
   background-color: var(--bg-color-sec);
   border: 1px solid var(--border-co);
+  color: var(--text-color);
 }
 
-tbody tr {
+.tbody tr {
   border-bottom: 1px solid var(--border-co);
 }
 
-tbody tr:last-child {
+.tbody tr:last-child {
   border-bottom: none;
 }
 
-th {
+.th {
   width: 30%;
   text-align: left;
   padding: 10px;
@@ -31,7 +26,7 @@ th {
   font-size: 14px;
 }
 
-td {
+.td {
   width: 70%;
   text-align: left;
   font-weight: 500;

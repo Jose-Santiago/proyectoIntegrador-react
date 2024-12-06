@@ -1,37 +1,37 @@
-import "@/Styles/TableDetail.module.css";
+import styles from "@/Styles/TableDetail.module.css";
 const TableDetail = ({ dentist }) => {
   return (
     <>
       <h2>Información Personal y Dirección</h2>
-      <table>
-        <tbody>
+      <table className={styles.table}>
+        <tbody className={styles.tbody}>
           <tr>
-            <th>Nombre:</th>
-            <td>{dentist?.name}</td>
+            <th className={styles.th}>Nombre:</th>
+            <td className={styles.td}>{dentist?.name}</td>
           </tr>
           <tr>
-            <th>Email:</th>
-            <td>{dentist?.email}</td>
+            <th className={styles.th}>Email:</th>
+            <td className={styles.td}>{dentist?.email}</td>
           </tr>
           <tr>
-            <th>Teléfono:</th>
-            <td>{dentist?.phone}</td>
+            <th className={styles.th}>Teléfono:</th>
+            <td className={styles.td}>{dentist?.phone}</td>
           </tr>
           <tr>
-            <th>Calle:</th>
-            <td>{dentist?.address?.street}</td>
+            <th className={styles.th}>Calle:</th>
+            <td className={styles.td}>{dentist?.address?.street}</td>
           </tr>
           <tr>
-            <th>Ciudad:</th>
-            <td>{dentist?.address?.city}</td>
+            <th className={styles.th}>Ciudad:</th>
+            <td className={styles.td}>{dentist?.address?.city}</td>
           </tr>
           <tr>
-            <th>Código Postal:</th>
-            <td>{dentist?.address?.zipcode}</td>
+            <th className={styles.th}>Código Postal:</th>
+            <td className={styles.td}>{dentist?.address?.zipcode}</td>
           </tr>
           <tr>
-            <th>Página Web:</th>
-            <td>{dentist?.website}</td>
+            <th className={styles.th}>Página Web:</th>
+            <td className={styles.td}>{dentist?.website}</td>
           </tr>
         </tbody>
       </table>
