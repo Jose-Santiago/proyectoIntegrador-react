@@ -7,10 +7,9 @@ form {
   margin-bottom: 10em;
   align-items: center;
   justify-content: center;
-}
-label {
   font-weight: bold;
 }
+
 input {
   width: 400px;
   height: 30px;
@@ -20,16 +19,6 @@ input {
   border: 1px solid rgb(0, 57, 244);
   color: var(--text-color);
 }
-/*
-input.dark {
-  width: 400px;
-  height: 30px;
-  border-radius: 10px;
-  font-size: 0.8em;
-  background-color: rgba(36, 74, 130, 0.129);
-  border: 1px solid rgb(244, 0, 81);
-  color: var(--text-color);
-}*/
 
 .input .dark {
   width: 400px;

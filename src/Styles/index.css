@@ -1,6 +1,7 @@
 :root {
   --text-color: #000000;
   --primary-color: #065bb6;
+  --border-co: #000000;
 }
 .dark {
   --bg-color: #121212;
@@ -212,12 +213,6 @@ h4 {
 }
 
 /*fin Estilos de card*/
-/*
-.dark {
-  background-color: #12121296;
-  color: white;
-}
-  */
 .dark > a {
   color: white;
 }
